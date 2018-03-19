@@ -1,0 +1,916 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.sendwordnow.com/contract/users/v2" xmlns:v1="http://www.sendwordnow.com" xmlns:v2="http://www.sendwordnow.com/schema/users/v2" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns="http://www.w3.org/2001/XMLSchema" name="Users" targetNamespace="http://www.sendwordnow.com/contract/users/v2">
+  <documentation>Version 2.3</documentation>
+  <types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.sendwordnow.com/contract/users/v2" schemaLocation="https://phx-wsnet.sendwordnow.com/webservices/XMLSchemas/Users/v02-CONTRACT-USERS.xsd" />
+    </xsd:schema>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.sendwordnow.com/schema/users/v2" schemaLocation="https://phx-wsnet.sendwordnow.com/webservices/XMLSchemas/Users/v02-TYPES-USERS.xsd" />
+    </xsd:schema>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://www.sendwordnow.com" schemaLocation="https://phx-wsnet.sendwordnow.com/webservices/XMLSchemas/Users/v01-TYPES-USERS.xsd" />
+    </xsd:schema>
+  </types>
+  <message name="EchoSoapIn">
+    <part name="parameters" element="tns:Echo" />
+  </message>
+  <message name="EchoSoapOut">
+    <part name="parameters" element="tns:EchoResponse" />
+  </message>
+  <message name="EchoAuthenticatedSoapIn">
+    <part name="parameters" element="tns:EchoAuthenticated" />
+  </message>
+  <message name="EchoAuthenticatedSoapOut">
+    <part name="parameters" element="tns:EchoAuthenticatedResponse" />
+  </message>
+  <message name="getOTIDSoapIn">
+    <part name="parameters" element="tns:getOTID" />
+  </message>
+  <message name="getOTIDSoapOut">
+    <part name="parameters" element="tns:getOTIDResponse" />
+  </message>
+  <message name="getGroupsSoapIn">
+    <part name="parameters" element="tns:getGroups" />
+  </message>
+  <message name="getGroupsSoapOut">
+    <part name="parameters" element="tns:getGroupsResponse" />
+  </message>
+  <message name="createGroupSoapIn">
+    <part name="parameters" element="tns:createGroup" />
+  </message>
+  <message name="createGroupSoapOut">
+    <part name="parameters" element="tns:createGroupResponse" />
+  </message>
+  <message name="deleteGroupSoapIn">
+    <part name="parameters" element="tns:deleteGroup" />
+  </message>
+  <message name="deleteGroupSoapOut">
+    <part name="parameters" element="tns:deleteGroupResponse" />
+  </message>
+  <message name="updateGroupSoapIn">
+    <part name="parameters" element="tns:updateGroup" />
+  </message>
+  <message name="updateGroupSoapOut">
+    <part name="parameters" element="tns:updateGroupResponse" />
+  </message>
+  <message name="getGroupDetailSoapIn">
+    <part name="parameters" element="tns:getGroupDetail" />
+  </message>
+  <message name="getGroupDetailSoapOut">
+    <part name="parameters" element="tns:getGroupDetailResponse" />
+  </message>
+  <message name="getGroupDetailExtendedOptionsHeader">
+    <part name="ExtendedOptionsHeader" element="tns:ExtendedOptionsHeader" />
+  </message>
+  <message name="getGroupSummarySoapIn">
+    <part name="parameters" element="tns:getGroupSummary" />
+  </message>
+  <message name="getGroupSummarySoapOut">
+    <part name="parameters" element="tns:getGroupSummaryResponse" />
+  </message>
+  <message name="isContactInGroupSoapIn">
+    <part name="parameters" element="tns:isContactInGroup" />
+  </message>
+  <message name="isContactInGroupSoapOut">
+    <part name="parameters" element="tns:isContactInGroupResponse" />
+  </message>
+  <message name="actionContactsGroupSoapIn">
+    <part name="parameters" element="tns:actionContactsGroup" />
+  </message>
+  <message name="actionContactsGroupSoapOut">
+    <part name="parameters" element="tns:actionContactsGroupResponse" />
+  </message>
+  <message name="createContactsSoapIn">
+    <part name="parameters" element="tns:createContacts" />
+  </message>
+  <message name="createContactsSoapOut">
+    <part name="parameters" element="tns:createContactsResponse" />
+  </message>
+  <message name="getContactDetailSoapIn">
+    <part name="parameters" element="tns:getContactDetail" />
+  </message>
+  <message name="getContactDetailSoapOut">
+    <part name="parameters" element="tns:getContactDetailResponse" />
+  </message>
+  <message name="getContactDetailExtendedOptionsHeader">
+    <part name="ExtendedOptionsHeader" element="tns:ExtendedOptionsHeader" />
+  </message>
+  <message name="updateContactSoapIn">
+    <part name="parameters" element="tns:updateContact" />
+  </message>
+  <message name="updateContactSoapOut">
+    <part name="parameters" element="tns:updateContactResponse" />
+  </message>
+  <message name="getTxtMsgCarriersSoapIn">
+    <part name="parameters" element="tns:getTxtMsgCarriers" />
+  </message>
+  <message name="getTxtMsgCarriersSoapOut">
+    <part name="parameters" element="tns:getTxtMsgCarriersResponse" />
+  </message>
+  <message name="deleteContactsSoapIn">
+    <part name="parameters" element="tns:deleteContacts" />
+  </message>
+  <message name="deleteContactsSoapOut">
+    <part name="parameters" element="tns:deleteContactsResponse" />
+  </message>
+  <message name="isContactInAccountSoapIn">
+    <part name="parameters" element="tns:isContactInAccount" />
+  </message>
+  <message name="isContactInAccountSoapOut">
+    <part name="parameters" element="tns:isContactInAccountResponse" />
+  </message>
+  <message name="getTimeZonesSoapIn">
+    <part name="parameters" element="tns:getTimeZones" />
+  </message>
+  <message name="getTimeZonesSoapOut">
+    <part name="parameters" element="tns:getTimeZonesResponse" />
+  </message>
+  <message name="setContactCustomFieldsDefinitionSoapIn">
+    <part name="parameters" element="tns:setContactCustomFieldsDefinition" />
+  </message>
+  <message name="setContactCustomFieldsDefinitionSoapOut">
+    <part name="parameters" element="tns:setContactCustomFieldsDefinitionResponse" />
+  </message>
+  <message name="getContactCustomFieldsDefinitionSoapIn">
+    <part name="parameters" element="tns:getContactCustomFieldsDefinition" />
+  </message>
+  <message name="getContactCustomFieldsDefinitionSoapOut">
+    <part name="parameters" element="tns:getContactCustomFieldsDefinitionResponse" />
+  </message>
+  <message name="getGlobalVoiceCascadeOrderSoapIn">
+    <part name="parameters" element="tns:getGlobalVoiceCascadeOrder" />
+  </message>
+  <message name="getGlobalVoiceCascadeOrderSoapOut">
+    <part name="parameters" element="tns:getGlobalVoiceCascadeOrderResponse" />
+  </message>
+  <message name="setGlobalVoiceCascadeOrderSoapIn">
+    <part name="parametersIn" element="tns:setGlobalVoiceCascadeOrder" />
+  </message>
+  <message name="setGlobalVoiceCascadeOrderSoapOut">
+    <part name="parametersOut" element="tns:setGlobalVoiceCascadeOrderResponse" />
+  </message>
+  <message name="isGlobalCascadeEnabledSoapIn">
+    <part name="parametersIn" element="tns:isGlobalCascadeEnabled" />
+  </message>
+  <message name="isGlobalCascadeEnabledSoapOut">
+    <part name="parametersOut" element="tns:isGlobalCascadeEnabledResponse" />
+  </message>
+  <message name="enableGlobalCascadeSoapIn">
+    <part name="parametersIn" element="tns:EnableGlobalCascade" />
+  </message>
+  <message name="enableGlobalCascadeSoapOut">
+    <part name="parametersOut" element="tns:EnableGlobalCascadeResponse" />
+  </message>
+  <!-- New in v2.3 -->
+  <message name="getContactLocationLabelsSoapIn">
+    <part name="parameters" element="tns:getContactLocationLabels" />
+  </message>
+  <message name="getContactLocationLabelsSoapOut">
+    <part name="parameters" element="tns:getContactLocationLabelsResponse" />
+  </message>
+  <message name="createContactLocationLabelSoapIn">
+    <part name="parameters" element="tns:createContactLocationLabel" />
+  </message>
+  <message name="createContactLocationLabelSoapOut">
+    <part name="parameters" element="tns:createContactLocationLabelResponse" />
+  </message>
+  <message name="renameContactLocationLabelSoapIn">
+    <part name="parameters" element="tns:renameContactLocationLabel" />
+  </message>
+  <message name="renameContactLocationLabelSoapOut">
+    <part name="parameters" element="tns:renameContactLocationLabelResponse" />
+  </message>
+  <message name="deleteContactLocationLabelSoapIn">
+    <part name="parameters" element="tns:deleteContactLocationLabel" />
+  </message>
+  <message name="deleteContactLocationLabelSoapOut">
+    <part name="parameters" element="tns:deleteContactLocationLabelResponse" />
+  </message>
+  <message name="getContactsLocationsSoapIn">
+    <part name="parameters" element="tns:getContactsLocations" />
+  </message>
+  <message name="getContactsLocationsSoapOut">
+    <part name="parameters" element="tns:getContactsLocationsResponse" />
+  </message>
+  <message name="setContactsLocationsSoapIn">
+    <part name="parameters" element="tns:setContactsLocations" />
+  </message>
+  <message name="setContactsLocationsSoapOut">
+    <part name="parameters" element="tns:setContactsLocationsResponse" />
+  </message>
+  <portType name="UsersSoap">
+    <operation name="Echo">
+      <documentation>Method to test connectivity</documentation>
+      <input message="tns:EchoSoapIn" />
+      <output message="tns:EchoSoapOut" />
+    </operation>
+    <operation name="EchoAuthenticated">
+      <documentation>Method to test authentication</documentation>
+      <input message="tns:EchoAuthenticatedSoapIn" />
+      <output message="tns:EchoAuthenticatedSoapOut" />
+    </operation>
+    <operation name="getOTID">
+      <documentation>Get One-time ID.</documentation>
+      <input message="tns:getOTIDSoapIn" />
+      <output message="tns:getOTIDSoapOut" />
+    </operation>
+    <operation name="getGroups">
+      <documentation>Get my list of groups.</documentation>
+      <input message="tns:getGroupsSoapIn" />
+      <output message="tns:getGroupsSoapOut" />
+    </operation>
+    <operation name="createGroup">
+      <documentation>Create a group.</documentation>
+      <input message="tns:createGroupSoapIn" />
+      <output message="tns:createGroupSoapOut" />
+    </operation>
+    <operation name="deleteGroup">
+      <documentation>Delete a group.</documentation>
+      <input message="tns:deleteGroupSoapIn" />
+      <output message="tns:deleteGroupSoapOut" />
+    </operation>
+    <operation name="updateGroup">
+      <documentation>Update a group.</documentation>
+      <input message="tns:updateGroupSoapIn" />
+      <output message="tns:updateGroupSoapOut" />
+    </operation>
+    <operation name="getGroupDetail">
+      <documentation>Retrieve group's detail.</documentation>
+      <input message="tns:getGroupDetailSoapIn" />
+      <output message="tns:getGroupDetailSoapOut" />
+    </operation>
+    <operation name="getGroupSummary">
+      <documentation>Retrieve group's summary.</documentation>
+      <input message="tns:getGroupSummarySoapIn" />
+      <output message="tns:getGroupSummarySoapOut" />
+    </operation>
+    <operation name="isContactInGroup">
+      <documentation>Verify if a contact belongs to a group.</documentation>
+      <input message="tns:isContactInGroupSoapIn" />
+      <output message="tns:isContactInGroupSoapOut" />
+    </operation>
+    <operation name="actionContactsGroup">
+      <documentation>Allows contacts to be added to/removed from a group.</documentation>
+      <input message="tns:actionContactsGroupSoapIn" />
+      <output message="tns:actionContactsGroupSoapOut" />
+    </operation>
+    <operation name="createContacts">
+      <documentation>Method to create Contacts. Use actionContactsGroup method to add new Contacts to an existing Group.</documentation>
+      <input message="tns:createContactsSoapIn" />
+      <output message="tns:createContactsSoapOut" />
+    </operation>
+    <operation name="getContactDetail">
+      <documentation>Retrieve contact's detail.</documentation>
+      <input message="tns:getContactDetailSoapIn" />
+      <output message="tns:getContactDetailSoapOut" />
+    </operation>
+    <operation name="updateContact">
+      <documentation>Update a contact.</documentation>
+      <input message="tns:updateContactSoapIn" />
+      <output message="tns:updateContactSoapOut" />
+    </operation>
+    <operation name="getTxtMsgCarriers">
+      <documentation>Get list of Text Message Carriers supported by SWN.</documentation>
+      <input message="tns:getTxtMsgCarriersSoapIn" />
+      <output message="tns:getTxtMsgCarriersSoapOut" />
+    </operation>
+    <operation name="deleteContacts">
+      <documentation>Delete contacts from account.</documentation>
+      <input message="tns:deleteContactsSoapIn" />
+      <output message="tns:deleteContactsSoapOut" />
+    </operation>
+    <operation name="isContactInAccount">
+      <documentation>Verify if a contact belongs to an account.</documentation>
+      <input message="tns:isContactInAccountSoapIn" />
+      <output message="tns:isContactInAccountSoapOut" />
+    </operation>
+    <operation name="getTimeZones">
+      <documentation>Get list of Time Zones supported by SWN.</documentation>
+      <input message="tns:getTimeZonesSoapIn" />
+      <output message="tns:getTimeZonesSoapOut" />
+    </operation>
+    <operation name="setContactCustomFieldsDefinition">
+      <documentation>Sets Contact Custom Fields definition in Account.</documentation>
+      <input message="tns:setContactCustomFieldsDefinitionSoapIn" />
+      <output message="tns:setContactCustomFieldsDefinitionSoapOut" />
+    </operation>
+    <operation name="getContactCustomFieldsDefinition">
+      <documentation>Gets Contact Custom Fields definition in Account.</documentation>
+      <input message="tns:getContactCustomFieldsDefinitionSoapIn" />
+      <output message="tns:getContactCustomFieldsDefinitionSoapOut" />
+    </operation>
+    <operation name="getGlobalVoiceCascadeOrder">
+      <documentation>Returns all the voice labels with their global voice cascade order.</documentation>
+      <input message="tns:getGlobalVoiceCascadeOrderSoapIn" />
+      <output message="tns:getGlobalVoiceCascadeOrderSoapOut" />
+    </operation>
+    <operation name="setGlobalVoiceCascadeOrder">
+      <documentation>Receives the labels array in its expected order and returns success code.</documentation>
+      <input message="tns:setGlobalVoiceCascadeOrderSoapIn" />
+      <output message="tns:setGlobalVoiceCascadeOrderSoapOut" />
+    </operation>
+    <operation name="IsGlobalCascadeEnabled">
+      <documentation>Returns true is GlobalCascade is enabled for all messages, false if not.</documentation>
+      <input message="tns:isGlobalCascadeEnabledSoapIn" />
+      <output message="tns:isGlobalCascadeEnabledSoapOut" />
+    </operation>
+    <operation name="EnableGlobalCascade">
+      <documentation>Manages the setting of global cascade.</documentation>
+      <input message="tns:enableGlobalCascadeSoapIn" />
+      <output message="tns:enableGlobalCascadeSoapOut" />
+    </operation>
+    <!-- New in v2.3 -->
+    <operation name="getContactLocationLabels">
+      <documentation>Get list of contact location labels defined in the account.</documentation>
+      <input message="tns:getContactLocationLabelsSoapIn" />
+      <output message="tns:getContactLocationLabelsSoapOut" />
+    </operation>
+    <operation name="createContactLocationLabel">
+      <documentation>Add secondary contact location label to account. Primary contact location label is created when account is created.</documentation>
+      <input message="tns:createContactLocationLabelSoapIn" />
+      <output message="tns:createContactLocationLabelSoapOut" />
+    </operation>
+    <operation name="renameContactLocationLabel">
+      <documentation>Rename contact location label. Name must be unique.</documentation>
+      <input message="tns:renameContactLocationLabelSoapIn" />
+      <output message="tns:renameContactLocationLabelSoapOut" />
+    </operation>
+    <operation name="deleteContactLocationLabel">
+      <documentation>Delete contact location label. Primary contact location label can't be deleted or labels in use.</documentation>
+      <input message="tns:deleteContactLocationLabelSoapIn" />
+      <output message="tns:deleteContactLocationLabelSoapOut" />
+    </operation>
+    <operation name="getContactsLocations">
+      <documentation>Returns locations for a list of contacts.</documentation>
+      <input message="tns:getContactsLocationsSoapIn" />
+      <output message="tns:getContactsLocationsSoapOut" />
+    </operation>
+    <operation name="setContactsLocations">
+      <documentation>Method to add, update, and/or remove locations for a list of contacts.</documentation>
+      <input message="tns:setContactsLocationsSoapIn" />
+      <output message="tns:setContactsLocationsSoapOut" />
+    </operation>
+  </portType>
+  <binding name="UsersSoap" type="tns:UsersSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Echo">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/Echo" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EchoAuthenticated">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/EchoAuthenticated" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getOTID">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getOTID" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getGroups">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getGroups" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createGroup">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/createGroup" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteGroup">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/deleteGroup" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateGroup">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/updateGroup" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getGroupDetail">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getGroupDetail" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getGroupDetailExtendedOptionsHeader" part="ExtendedOptionsHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+        <soap:header message="tns:getGroupDetailExtendedOptionsHeader" part="ExtendedOptionsHeader" use="literal" />
+      </output>
+    </operation>
+    <operation name="getGroupSummary">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getGroupSummary" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="isContactInGroup">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/isContactInGroup" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actionContactsGroup">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/actionContactsGroup" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createContacts">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/createContacts" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getContactDetail">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getContactDetail" style="document" />
+      <input>
+        <soap:body use="literal" />
+        <soap:header message="tns:getContactDetailExtendedOptionsHeader" part="ExtendedOptionsHeader" use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+        <soap:header message="tns:getContactDetailExtendedOptionsHeader" part="ExtendedOptionsHeader" use="literal" />
+      </output>
+    </operation>
+    <operation name="updateContact">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/updateContact" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getTxtMsgCarriers">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getTxtMsgCarriers" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteContacts">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/deleteContacts" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="isContactInAccount">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/isContactInAccount" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getTimeZones">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getTimeZones" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setContactCustomFieldsDefinition">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/setContactCustomFieldsDefinition" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getContactCustomFieldsDefinition">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getContactCustomFieldsDefinition" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getGlobalVoiceCascadeOrder">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getGlobalVoiceCascadeOrder" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setGlobalVoiceCascadeOrder">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/setGlobalVoiceCascadeOrder" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IsGlobalCascadeEnabled">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/IsGlobalCascadeEnabled" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EnableGlobalCascade">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/EnableGlobalCascade" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <!-- New in v2.3 -->
+    <operation name="getContactLocationLabels">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getContactLocationLabels" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createContactLocationLabel">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/createContactLocationLabel" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="renameContactLocationLabel">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/renameContactLocationLabel" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteContactLocationLabel">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/deleteContactLocationLabel" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getContactsLocations">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getContactsLocations" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setContactsLocations">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/setContactsLocations" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="UsersSoap12" type="tns:UsersSoap">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="Echo">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/Echo" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EchoAuthenticated">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/EchoAuthenticated" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getOTID">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getOTID" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getGroups">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getGroups" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createGroup">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/createGroup" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteGroup">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/deleteGroup" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateGroup">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/updateGroup" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getGroupDetail">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getGroupDetail" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getGroupSummary">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getGroupSummary" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="isContactInGroup">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/isContactInGroup" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actionContactsGroup">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/actionContactsGroup" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createContacts">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/createContacts" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getContactDetail">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getContactDetail" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateContact">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/updateContact" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getTxtMsgCarriers">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getTxtMsgCarriers" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteContacts">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/deleteContacts" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="isContactInAccount">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/isContactInAccount" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getTimeZones">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getTimeZones" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setContactCustomFieldsDefinition">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/setContactCustomFieldsDefinition" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getContactCustomFieldsDefinition">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getContactCustomFieldsDefinition" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getGlobalVoiceCascadeOrder">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getGlobalVoiceCascadeOrder" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setGlobalVoiceCascadeOrder">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/setGlobalVoiceCascadeOrder" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="IsGlobalCascadeEnabled">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/IsGlobalCascadeEnabled" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EnableGlobalCascade">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/EnableGlobalCascade" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <!-- New in v2.3 -->
+    <operation name="getContactLocationLabels">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getContactLocationLabels" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createContactLocationLabel">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/createContactLocationLabel" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="renameContactLocationLabel">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/renameContactLocationLabel" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteContactLocationLabel">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/deleteContactLocationLabel" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getContactsLocations">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/getContactsLocations" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="setContactsLocations">
+      <soap:operation soapAction="http://www.sendwordnow.com/contract/users/v2/setContactsLocations" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Users">
+    <documentation>Users Management Service v2.3</documentation>
+    <port name="UsersSoap" binding="tns:UsersSoap">
+      <soap:address location="https://phx-wsnet.sendwordnow.com/WebServices/v2/Users.asmx" />
+    </port>
+    <port name="UsersSoap12" binding="tns:UsersSoap12">
+      <soap:address location="https://phx-wsnet.sendwordnow.com/WebServices/v2/Users.asmx" />
+    </port>
+  </service>
+</definitions>
